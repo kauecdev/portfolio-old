@@ -1,0 +1,40 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  outline: 0;
+}
+
+html,
+body {
+  background-color: #091A2B;
+  font-family: Cairo;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+div#social-media-links-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 10px 8px;
+
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+
+  background-color: #2D4584;
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+}
+
+div#social-media-links-container a {
+  margin: 10px 0;
+  line-height: 0;
+}
