@@ -2,7 +2,7 @@ import Head from 'next/head';
 import { FaGithub, FaLinkedin } from 'react-icons/fa';
 import { GrMail } from 'react-icons/gr';
 
-import { HomeSection, TextBlock } from './styles';
+import { HomeSection, TextBlock } from '../styles/styles.index';
 
 import Header from '../src/components/PageHeader';
 
