@@ -40,7 +40,7 @@ div#social-media-links-container a {
 }
 
 .preloader {
-  background-color: #2D4584;
+  background-color: #f2f2f2 !important;
 }
 
 @media screen and (max-width: 800px) {
