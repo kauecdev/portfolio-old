@@ -39,6 +39,10 @@ div#social-media-links-container a {
   line-height: 0;
 }
 
+.preloader {
+  background-color: #2D4584;
+}
+
 @media screen and (max-width: 800px) {
   div#social-media-links-container {
     display: none;
