@@ -1,5 +1,6 @@
 import Head from 'next/head';
-import { FaGithub, FaLinkedin, FaInstagram } from 'react-icons/fa';
+import { FaGithub, FaLinkedin } from 'react-icons/fa';
+import { GrMail } from 'react-icons/gr';
 
 import { HomeSection, TextBlock } from './styles';
 
@@ -19,16 +20,16 @@ export default function Home() {
       </Head>
 
       <div id="social-media-links-container">
-        <a>
+        <a target="_blank" href="https://github.com/kauecdev">
           <FaGithub color="#fff" size={30} />
         </a>
 
-        <a>
+        <a target="_blank" href="https://www.linkedin.com/in/kau%C3%AA-cavalcante-76683214b/">
           <FaLinkedin color="#fff" size={30} />
         </a>
 
-        <a>
-          <FaInstagram color="#fff" size={30} />
+        <a href="mailto:kaue_cavalcante.cnt@outlook.com">
+          <GrMail color="#fff" size={30} />
         </a>
       </div>
 
@@ -45,14 +46,6 @@ export default function Home() {
             </p>
             <span className="myName">Kauê Cavalcante</span>
             <span className="subtitle">Desenvolvedor de software</span>
-
-            <a href="#about">
-              Vem me conhecer!
-              <img
-                src="/assets/icons/Arrow.svg"
-                alt="Flecha"
-              />
-            </a>
           </TextBlock>
 
           <figure>
@@ -63,6 +56,14 @@ export default function Home() {
           </figure>
           
         </div>
+
+        <a id="go-about" href="#about">
+          Vem me conhecer!
+          <img
+            src="/assets/icons/Arrow.svg"
+            alt="Flecha"
+          />
+        </a>
 
       </HomeSection>
 

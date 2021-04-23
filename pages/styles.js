@@ -5,6 +5,7 @@ export const HomeSection = styled.div`
   max-height: 100vh;
   background-image: url('assets/images/shapes.png');
   background-position: cover;
+  background-repeat: no-repeat;
   background-size: 100%;
 
   > div {
@@ -22,6 +23,56 @@ export const HomeSection = styled.div`
 
       img {
         width: 70%;
+      }
+    }
+  }
+
+  a#go-about {
+    width: 50%;
+    font-size: 24px;
+    font-weight: 600;
+    border-radius: 10px;
+    background-color: #2D4584;
+    color: #ffffff;
+    padding: 10px 20px;
+    text-align: center;
+    position: relative;
+    top: -80px;
+    left: 80px;
+
+    img {
+      position: absolute;
+      bottom: -68px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+
+  @media screen and (max-width: 800px) {
+    background-image: url('assets/images/shapes-mobile.png');
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    > div {
+      padding: 0 20px;
+      flex-direction: column;
+
+      figure {
+        width: 100%;
+      }
+    }
+
+    a#go-about {
+      top: 40px;
+      left: 0;
+
+      font-size: 16px;
+
+      img {
+        bottom: -34px;
+        width: 20px;
       }
     }
   }
@@ -54,20 +105,23 @@ export const TextBlock = styled.div`
     margin-bottom: 20px;
   }
 
-  a {
-    width: 50%;
-    font-size: 24px;
-    border-radius: 10px;
-    background-color: #2D4584;
-    padding: 10px 20px;
+  @media screen and (max-width: 800px) {
     text-align: center;
-    position: relative;
+    width: 100%;
 
-    img {
-      position: absolute;
-      bottom: -68px;
-      left: 50%;
-      transform: translateX(-50%);
+    p {
+      font-size: 24px;
+      line-height: 24px;
+    }
+
+    span.myName {
+      font-size: 40px;
+      line-height: 40px;
+    }
+
+    span.subtitle {
+      font-size: 22px;
+      line-height: 24px;
     }
   }
 `;

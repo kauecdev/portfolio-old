@@ -1,5 +1,4 @@
 import React from 'react';
-import Image from 'next/image';
 
 import { Header } from './styles';
 
@@ -7,7 +6,7 @@ const PageHeader = () => {
   return (
     <Header>
       <a href="/">
-        <Image
+        <img
           src="/assets/images/kc.png"
           alt="Kauê Cavalcante"
           width={60}

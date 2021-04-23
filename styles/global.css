@@ -38,3 +38,9 @@ div#social-media-links-container a {
   margin: 10px 0;
   line-height: 0;
 }
+
+@media screen and (max-width: 800px) {
+  div#social-media-links-container {
+    display: none;
+  }
+}
