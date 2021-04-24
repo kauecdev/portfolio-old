@@ -12,16 +12,23 @@ export const Header = styled.header`
     list-style-type: none;
     display: inline-block;
     margin: 0 30px;
-    transition: opacity 0.2s;
-
-    &:hover {
-      opacity: 1.0;
-    }
 
     a {
+      background: linear-gradient(
+       to bottom, #2D4584 0%,
+       #2D4584 100%
+      );
+      background-position: 0 100%;
+      background-repeat: repeat-x;
+      background-size: 0px 0px;
       font-size: 24px;
       font-weight: 700;
       color: #ffffff;
+      transition: background-size 0.3s;
+
+      &:hover {
+        background-size: 20px 4px;
+      }
     }
   }
 

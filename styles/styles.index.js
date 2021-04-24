@@ -27,7 +27,7 @@ export const HomeSection = styled.div`
     }
   }
 
-  a#go-about {
+  #go-about {
     width: 50%;
     font-size: 24px;
     font-weight: 600;
