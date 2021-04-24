@@ -2,7 +2,7 @@ import Head from 'next/head';
 import { FaGithub, FaLinkedin } from 'react-icons/fa';
 import { GrMail } from 'react-icons/gr';
 
-import { HomeSection, TextBlock } from '../styles/styles.index';
+import { HomeSection, TextBlock, AboutSection } from '../styles/styles.index';
 
 import Header from '../src/components/PageHeader';
 
@@ -66,6 +66,32 @@ export default function Home() {
         </a>
 
       </HomeSection>
+
+      <AboutSection id="about">
+        <h2>Sobre mim</h2>
+
+        <div>
+          <div>
+            <p>
+              Sou estudante do curso superior de Análise e Desenvolvimento de 
+              Sisemas no Instituto Federal do Piauí. Além da faculdade, estudo 
+              diariamente sobre desenvolvimento web e mobile, lidando tanto com a 
+              parte Front-end quanto Back-end.
+            </p>
+            <p>
+              Iniciei meus estudos no final de 2019 e desde então continuo seguindo 
+              nesta grande trilha que é o mundo da tecnologia, da qual sou 
+              apaixonado. Mais abaixo você poderá encontrar mais informações 
+              técnicas sobre mim, caso eu possa ajudar em algo, entre em contato 
+              comigo!
+            </p>
+          </div>
+          <figure>
+            <img src="/assets/images/kaue.png" alt="Kauê Cavalcante"/>
+          </figure>
+        </div>
+
+      </AboutSection>
 
     </div>
   )

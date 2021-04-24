@@ -125,3 +125,70 @@ export const TextBlock = styled.div`
     }
   }
 `;
+
+export const AboutSection = styled.div`
+  width: 100%;
+  height: 100vh;
+  background-image: url('/assets/images/lines.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100% 50%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  h2 {
+    font-size: 44px;
+    color: #ffffff;
+  }
+
+  > div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 40px;
+
+    > div {
+      margin-right: 60px;
+
+      p {
+        color: #ffffff;
+        font-size: 20px;
+        text-align: justify;
+        max-width: 800px;
+      }
+    }
+
+    figure {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    img {
+      width: 80%;
+      border-radius: 50%;
+      box-shadow: 0 0 40px rgba(0, 0, 0, 0.6);
+    }
+  }
+
+  @media screen and (max-width: 800px) {
+    height: auto;
+    padding: 100px 0 80px 0;
+    background-image: url('/assets/images/lines-mobile.svg');
+    background-size: 100% 70%;
+
+    > div {
+      flex-direction: column;
+
+      > div {
+        padding: 40px 0;
+        margin-right: 0; 
+      }
+
+    }
+  }
+  
+`;

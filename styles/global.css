@@ -5,7 +5,10 @@
   outline: 0;
 }
 
-html,
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background-color: #091A2B;
   font-family: Cairo;
