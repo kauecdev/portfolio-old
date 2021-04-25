@@ -2,7 +2,12 @@ import Head from 'next/head';
 import { FaGithub, FaLinkedin } from 'react-icons/fa';
 import { GrMail } from 'react-icons/gr';
 
-import { HomeSection, TextBlock, AboutSection } from '../styles/styles.index';
+import { 
+  HomeSection, 
+  TextBlock, 
+  AboutSection,
+  ExperienceSection,
+} from '../styles/styles.index';
 
 import Header from '../src/components/PageHeader';
 
@@ -92,6 +97,61 @@ export default function Home() {
         </div>
 
       </AboutSection>
+
+      <ExperienceSection id="experience">
+        <h2>Experiência</h2>
+
+        <div>
+          <div id="timeline-bar">
+            <div className="experience-wrapper first-experience">
+              <img
+                src="/assets/icons/elliptic.png"
+                alt="Elliptic Technology"
+                className="logo"
+              />
+              <img
+                src="/assets/icons/Arrow-Blue.svg"
+                alt="Flecha"
+                className="arrow-right"
+              />
+              <div>
+                <h3>Desenvolvedor Front-end</h3>
+                <p className="company">Elliptic Technology</p>
+                <p>ago/2020 - Presente</p>
+                <br/>
+                <p>
+                  Responsável pelo desenvolvimento e manutenção das interfaces
+                  web projetadas.
+                </p>
+              </div>
+            </div>
+
+            <div className="experience-wrapper second-experience">
+              <div>
+                <h3>Estagiário de desenvolvimento Front-end</h3>
+                <p className="company">Mundiware</p>
+                <p>nov/2020 - abr/2021</p>
+                <br/>
+                <p>
+                Responsável pela manutenção de portais de clientes, 
+                acompanhamento do desenvolvimento de novas features, 
+                monitoramento e correção de erros.
+                </p>
+              </div>
+              <img
+                src="/assets/icons/Arrow-Blue.svg"
+                alt="Flecha"
+                className="arrow-right"
+              />
+              <img
+                src="/assets/icons/mundiware.png"
+                alt="Mundiware"
+                className="logo"
+              />
+            </div>
+          </div>
+        </div>
+      </ExperienceSection>
 
     </div>
   )
