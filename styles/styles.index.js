@@ -344,3 +344,130 @@ export const ExperienceSection = styled.div`
     }
   }
 `;
+
+export const ProjectsSection = styled.div`
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 80px 0;
+
+  h2 {
+    color: #ffffff;
+    font-size: 44px;
+    margin-bottom: 40px;
+  }
+
+  div.projects-container {
+    width: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px 0;
+
+    a {
+      width: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      cursor: pointer;
+      transition: transform 0.3s;
+
+      &:hover {
+        transform: scale(1.1);
+      }
+
+      h3 {
+        color: #ffffff;
+        text-align: center;
+        font-size: 18px;
+        line-height: 20px;
+        padding: 0 40px;
+      }
+
+      img {
+        width: 90%;
+      }
+    }
+  }
+
+  span {
+    width: 60%;
+    text-align: center;
+    margin: 30px 0;
+    font-size: 20px;
+    line-height: 22px;
+    color: #ffffff;
+  }
+
+  div#go-github {
+    width: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    > img {
+      width: 40%;
+      margin-right: 30px;
+    }
+
+    a {
+      font-size: 24px;
+      font-weight: 600;
+      border-radius: 10px;
+      background-color: #2D4584;
+      color: #ffffff;
+      padding: 10px 20px;
+      text-align: center;
+      position: relative;
+
+      img {
+        width: 50px;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        right: -45px;
+      }
+    }
+  }
+
+  @media screen and (max-width: 800px) {
+    div.projects-container {
+      flex-wrap: wrap;
+      margin: 0;
+      
+      a {
+        width: 100% !important;
+        margin-bottom: 30px;
+      }
+    }
+
+    span {
+      width: 80%;
+      font-size: 18px;
+      line-height: 24px;
+    }
+
+    div#go-github {
+      flex-direction: column;
+      width: 90%;
+
+       > img {
+        width: 30%;
+        margin-right: 10px;
+        margin-bottom: 30px;
+      }
+
+      a {
+        font-size: 18px;
+
+        img {
+          width: 40px;
+          right: -36px;
+        }
+      }
+    }
+  }
+`;

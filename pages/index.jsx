@@ -7,6 +7,7 @@ import {
   TextBlock, 
   AboutSection,
   ExperienceSection,
+  ProjectsSection,
 } from '../styles/styles.index';
 
 import Header from '../src/components/PageHeader';
@@ -153,6 +154,60 @@ export default function Home() {
         </div>
       </ExperienceSection>
 
+      <ProjectsSection id="projects">
+        <h2>Projetos</h2>
+
+        <div className="projects-container">
+          <a target="_blank" href="http://empreendedorismoufpi.com.br/">
+            <img
+              src="/assets/images/liga.png"
+              alt="Liga Acadêmica de Empreendedorismo do Piauí"
+            />
+            <h3>
+              Site da Liga Acadêmica de Empreendedorismo do Piauí
+            </h3>
+          </a>
+
+          <a target="_blank" href="https://github.com/kauecdev/tech.iz">
+            <img
+              src="/assets/images/techiz.png"
+              alt="Liga Acadêmica de Empreendedorismo do Piauí"
+            />
+            <h3>
+              Jogo de perguntas e respostas sobre o mundo da tecnologia 
+            </h3>
+          </a>
+        </div>
+
+        <div className="projects-container">
+          <a target="_blank" href="https://github.com/kauecdev/ecoflix-projeto-alura-imersao-react">
+            <img
+              src="/assets/images/ecoflix.png"
+              alt="Liga Acadêmica de Empreendedorismo do Piauí"
+            />
+            <h3>
+              Projeto desenvolvido durante a Imersão React da Alura
+            </h3>
+          </a>
+        </div>
+
+        <span>
+          Esses são alguns dos projetos da qual participei/criei, mas no 
+          meu github você pode encontrar muito mais, clique e venha conferir!
+        </span>
+
+        <div id="go-github">
+          <img src="/assets/icons/Octocat.svg" alt="Octocat" />
+          <a target="_blank" href="https://github.com/kauecdev">
+            Meu github
+            <img
+              src="/assets/icons/Arrow-Right.svg"
+              alt="Flecha"
+            />
+          </a>
+        </div>
+      </ProjectsSection>
+      
     </div>
   )
 }
