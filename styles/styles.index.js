@@ -199,7 +199,7 @@ export const ExperienceSection = styled.div`
   background-position: center;
   background-repeat: no-repeat;
   background-size: 100% auto;
-  padding: 80px 0;
+  padding: 40px 0;
 
   display: flex;
   justify-content: center;
@@ -351,7 +351,7 @@ export const ProjectsSection = styled.div`
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  padding: 80px 0;
+  padding: 40px 0;
 
   h2 {
     color: #ffffff;
