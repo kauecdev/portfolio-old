@@ -1,6 +1,7 @@
 import Head from 'next/head';
 import { FaGithub, FaLinkedin } from 'react-icons/fa';
 import { GrMail } from 'react-icons/gr';
+import { useForm, ValidationError } from '@formspree/react'; 
 
 import { 
   HomeSection, 
@@ -8,11 +9,14 @@ import {
   AboutSection,
   ExperienceSection,
   ProjectsSection,
+  ContactSection,
 } from '../styles/styles.index';
 
 import Header from '../src/components/PageHeader';
 
 export default function Home() {
+  const [state, handleSubmit] = useForm("xyylkgjq");
+  
   return (
     <div>
       <Head>
@@ -208,6 +212,54 @@ export default function Home() {
         </div>
       </ProjectsSection>
       
+      <ContactSection id="contact">
+        <h2>Entre em contato comigo!</h2>
+
+        <div>
+
+          <a target="_blank" href='https://br.freepik.com/vetores/mulher'>
+            <img 
+              src="/assets/images/send-mail.svg" 
+              alt="Enviar e-mail"  
+            />
+          </a>
+
+          <form onSubmit={handleSubmit}>
+            <label htmlFor="nome">
+              Nome<span>*</span>:
+            </label>
+            <input
+              id="nome"
+              type="text" 
+              name="nome"
+              placeholder="Digite seu nome aqui..."
+            />
+            <label htmlFor="email">
+              E-mail<span>*</span>:
+            </label>
+            <input
+              id="email"
+              type="email" 
+              name="email"
+              placeholder="Digite seu e-mail aqui..."
+            />
+            <label htmlFor="message">
+              Mensagem<span>*</span>:
+            </label>
+            <textarea
+              id="message"
+              name="message"
+              placeholder="Digite sua mensagem aqui..."
+            />
+            <button type="submit" disabled={state.submitting}>
+              Enviar
+            </button>
+          </form>
+        </div>
+        <span>
+          Desenvolvido por Kauê Cavalcante com muito ❤️ © 2021
+        </span>
+      </ContactSection>
     </div>
   )
 }

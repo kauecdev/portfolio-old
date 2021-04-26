@@ -33,7 +33,6 @@ export const HomeSection = styled.div`
     font-weight: 600;
     border-radius: 10px;
     background-color: #2D4584;
-    color: #ffffff;
     padding: 10px 20px;
     text-align: center;
     position: relative;
@@ -80,7 +79,6 @@ export const HomeSection = styled.div`
 
 export const TextBlock = styled.div`
   width: 50%;
-  color: #ffffff;
   
   display: flex;
   flex-direction: column;
@@ -141,7 +139,6 @@ export const AboutSection = styled.div`
 
   h2 {
     font-size: 44px;
-    color: #ffffff;
   }
 
   > div {
@@ -154,7 +151,6 @@ export const AboutSection = styled.div`
       margin-right: 60px;
 
       p {
-        color: #ffffff;
         font-size: 20px;
         text-align: justify;
         max-width: 800px;
@@ -207,7 +203,6 @@ export const ExperienceSection = styled.div`
   flex-direction: column;
 
   h2 {
-    color: #ffffff;
     font-size: 44px;
     margin-bottom: 40px;
   }
@@ -234,7 +229,6 @@ export const ExperienceSection = styled.div`
         justify-content: space-between;
         align-items: center;
         position: absolute;
-        color: #ffffff;
 
         img {
           width: 120px;
@@ -354,7 +348,6 @@ export const ProjectsSection = styled.div`
   padding: 40px 0;
 
   h2 {
-    color: #ffffff;
     font-size: 44px;
     margin-bottom: 40px;
   }
@@ -380,7 +373,6 @@ export const ProjectsSection = styled.div`
       }
 
       h3 {
-        color: #ffffff;
         text-align: center;
         font-size: 18px;
         line-height: 20px;
@@ -399,7 +391,6 @@ export const ProjectsSection = styled.div`
     margin: 30px 0;
     font-size: 20px;
     line-height: 22px;
-    color: #ffffff;
   }
 
   div#go-github {
@@ -418,7 +409,6 @@ export const ProjectsSection = styled.div`
       font-weight: 600;
       border-radius: 10px;
       background-color: #2D4584;
-      color: #ffffff;
       padding: 10px 20px;
       text-align: center;
       position: relative;
@@ -469,5 +459,122 @@ export const ProjectsSection = styled.div`
         }
       }
     }
+  }
+`;
+
+export const ContactSection = styled.div`
+  width: 100%;
+  padding-top: 20px;
+
+  background-image: url('/assets/images/polygon-luminary.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  h2 {
+    font-size: 44px;
+  }
+
+  > div {
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 30px;
+
+    a {
+      width: 50%;
+
+      img {
+        width: 100%;
+      }
+    }
+
+    form {
+      width: 50%;
+      display: flex;
+      flex-direction: column;
+
+      label {
+        span {
+          color: red;
+        }
+      }
+
+      input {
+        padding: 10px 8px;
+        border: 0;
+        border-radius: 6px;
+      }
+
+      textarea {
+        font-family: Cairo;
+        padding: 8px 6px;
+        margin-bottom: 20px;
+        border: 0;
+        border-radius: 6px;
+        resize: vertical;
+      }
+
+      button {
+        max-width: 200px;
+        font-size: 20px;
+        color: #ffffff;
+        background-color: #2D4584;
+        border: 0;
+        border-radius: 10px;
+        padding: 8px 20px;
+        cursor: pointer;
+      }
+    }
+  }
+
+  span { 
+    font-size: 24px;
+    margin: 80px 0 10px;
+  }
+
+  @media screen and (max-width: 800px) {
+    background-image: url('/assets/images/polygon-luminary-mobile.png');
+    background-position: top;
+    background-size: 100%;
+
+    h2 {
+      line-height: 46px;
+      text-align: center;
+    }
+
+    > div {
+      width: 80%;
+
+      a {
+        display: none;
+      }
+
+      form {
+        width: 100%;
+        padding-bottom: 60px;
+
+        textarea {
+          margin-bottom: 30px;
+        }
+
+        button {
+          padding: 12px 20px;
+          max-width: 100%;
+          width: 100%;
+          align-self: center;
+        }
+      }
+    }
+
+    > span {
+      display: none;
+    } 
   }
 `;
