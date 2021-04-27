@@ -53,6 +53,7 @@ export const HomeSection = styled.div`
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    padding-top: 40px;
 
     > div {
       padding: 0 20px;
@@ -551,6 +552,7 @@ export const ContactSection = styled.div`
 
     > div {
       width: 80%;
+      margin-bottom: 30px;
 
       a {
         display: none;

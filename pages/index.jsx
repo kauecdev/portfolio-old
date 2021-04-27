@@ -1,7 +1,9 @@
 import Head from 'next/head';
+import { useState, useEffect } from 'react';
 import { FaGithub, FaLinkedin } from 'react-icons/fa';
 import { GrMail } from 'react-icons/gr';
-import { useForm, ValidationError } from '@formspree/react'; 
+import { toast, ToastContainer } from 'react-toastify';
+import axios from 'axios';
 
 import { 
   HomeSection, 
@@ -14,8 +16,59 @@ import {
 
 import Header from '../src/components/PageHeader';
 
+toast.configure();
 export default function Home() {
-  const [state, handleSubmit] = useForm("xyylkgjq");
+  const [windowSize, setWindowSize] = useState(0);
+  const [serverState, setServerState] = useState({
+    submitting: false,
+    status: false
+  });
+
+  useEffect(() => {
+    setWindowSize(window.innerWidth);
+  }, []);
+
+  function handleServerResponse(ok, form) {
+    setServerState({
+      submitting: false,
+      status: ok,
+    });
+    if (ok) {
+      form.reset();
+    }
+  };
+
+  function handleSubmitForm(e) {
+    e.preventDefault();
+    const form = e.target;
+
+    setServerState({
+      submitting: true,
+      status: serverState.status,
+    });
+
+    axios({
+      method: 'post',
+      url: 'https://formspree.io/xyylkgjq',
+      data: new FormData(form),
+    })
+      .then(response => {
+        handleServerResponse(true, form);
+        toast.success('E-mail enviado com sucesso!', {
+          position: windowSize > 800 
+            ? toast.POSITION.TOP_RIGHT
+            : toast.POSITION.BOTTOM_RIGHT,
+        });
+      })
+      .catch(response => {
+        handleServerResponse(false, form);
+        toast.error('Erro! Tente novamente.', {
+          position: windowSize > 800 
+            ? toast.POSITION.TOP_RIGHT
+            : toast.POSITION.BOTTOM_RIGHT,
+        });
+      })
+  }
   
   return (
     <div>
@@ -38,7 +91,7 @@ export default function Home() {
           <FaLinkedin color="#fff" size={30} />
         </a>
 
-        <a href="mailto:kaue_cavalcante.cnt@outlook.com">
+        <a href="#contact">
           <GrMail color="#fff" size={30} />
         </a>
       </div>
@@ -224,7 +277,7 @@ export default function Home() {
             />
           </a>
 
-          <form onSubmit={handleSubmit}>
+          <form onSubmit={handleSubmitForm}>
             <label htmlFor="nome">
               Nome<span>*</span>:
             </label>
@@ -233,6 +286,7 @@ export default function Home() {
               type="text" 
               name="nome"
               placeholder="Digite seu nome aqui..."
+              required
             />
             <label htmlFor="email">
               E-mail<span>*</span>:
@@ -241,6 +295,7 @@ export default function Home() {
               id="email"
               type="email" 
               name="email"
+              required
               placeholder="Digite seu e-mail aqui..."
             />
             <label htmlFor="message">
@@ -249,9 +304,10 @@ export default function Home() {
             <textarea
               id="message"
               name="message"
+              required
               placeholder="Digite sua mensagem aqui..."
             />
-            <button type="submit" disabled={state.submitting}>
+            <button type="submit" disabled={serverState.submitting}>
               Enviar
             </button>
           </form>
@@ -260,6 +316,8 @@ export default function Home() {
           Desenvolvido por Kauê Cavalcante com muito ❤️ © 2021
         </span>
       </ContactSection>
+
+      <ToastContainer />
     </div>
   )
 }
