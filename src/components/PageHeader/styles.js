@@ -35,6 +35,10 @@ export const Header = styled.header`
     }
   }
 
+  #hamburguer {
+    display: none;
+  }
+
   div#header-mobile-container {
     display: none;
   }
@@ -47,6 +51,7 @@ export const Header = styled.header`
     }
 
     #hamburguer {
+      display: block;
       position: absolute;
       z-index: 3;
       top: 20px;
